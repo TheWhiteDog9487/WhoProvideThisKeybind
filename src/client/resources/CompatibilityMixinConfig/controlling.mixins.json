@@ -1,0 +1,10 @@
+{
+  "required": false,
+  "package": "xyz.thewhitedog9487.client.mixin.Compatibility.Controlling",
+  "compatibilityLevel": "JAVA_25",
+  "plugin": "xyz.thewhitedog9487.client.mixin.Compatibility.Controlling.MixinPlugin",
+  "client": [
+    "NewKeyBindsListMixin" ],
+  "injectors": {
+    "defaultRequire": 0 }
+}

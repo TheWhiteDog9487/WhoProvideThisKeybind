@@ -1,0 +1,20 @@
+{
+  "modmenu.nameTranslation.whoprovidethiskeybind": "Who Provides This Keybind?",
+  "modmenu.descriptionTranslation.whoprovidethiskeybind": "Adds hover information on keybind change buttons in the keybinding settings screen to show which mod provides the keybind\nTip: If you need to use the config menu, install the YetAnotherConfigLib mod",
+  "link.bilibili": "Bilibili Homepage",
+  "link.blog": "TheWhiteDog9487's Blog",
+  "title.config": "Who Provides This Keybind?",
+  "config.category.general": "General",
+  "option.ModEnabled": "Enable Mod Functionality",
+  "option.ModEnabled.description": "Changes take effect immediately after modification and save without restarting the game",
+  "option.ShowModID": "Show Mod ID",
+  "option.ShowModID.description": "Display the Mod ID of the provider in the tooltip",
+  "option.ShowKeybindID": "Show Keybind ID",
+  "option.ShowKeybindID.description": "Display the keybind's own ID in the tooltip",
+  "option.ShowDebugInfo": "Show Debug Info",
+  "option.ShowDebugInfo.description": "This information is used to troubleshoot issues related to this mod; it generally does not need to be enabled",
+  "tooltip.provided_by": "Provided by: %s",
+  "tooltip.provider_mod_id": "Provider Mod ID: %s",
+  "tooltip.key_id": "Keybind ID: %s",
+  "special_provider_UNKNOWN": "Unknown"
+}

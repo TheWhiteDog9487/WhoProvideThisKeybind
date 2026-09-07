@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "xyz.thewhitedog9487.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "KeyBindsListKeyEntryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

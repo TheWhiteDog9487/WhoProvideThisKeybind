@@ -1,0 +1,20 @@
+{
+  "modmenu.nameTranslation.whoprovidethiskeybind": "谁在提供这个键位？",
+  "modmenu.descriptionTranslation.whoprovidethiskeybind": "在按键绑定设置界面的键位更改按钮上添加鼠标悬停信息，显示该按键绑定是由哪个Mod提供的\n提示：如果需要使用配置菜单，请安装YetAnotherConfigLib模组",
+  "link.bilibili": "哔哩哔哩主页",
+  "link.blog": "TheWhiteDog9487的博客",
+  "title.config": "谁在提供这个键位？",
+  "config.category.general": "通用",
+  "option.ModEnabled": "是否启用模组功能",
+  "option.ModEnabled.description": "无需重启游戏，修改并保存后立刻生效",
+  "option.ShowModID": "是否显示Mod ID",
+  "option.ShowModID.description": "在提示信息中显示提供该按键的Mod的ID",
+  "option.ShowKeybindID": "是否显示键位ID",
+  "option.ShowKeybindID.description": "在提示信息中显示该按键本身的ID",
+  "option.ShowDebugInfo": "是否显示调试信息",
+  "option.ShowDebugInfo.description": "这些信息用于出现和本Mod相关的问题时进行排查，一般情况下不需要开启",
+  "tooltip.provided_by": "提供者：%s",
+  "tooltip.provider_mod_id": "提供者ID：%s",
+  "tooltip.key_id": "键位ID：%s",
+  "special_provider_UNKNOWN": "未知"
+}
