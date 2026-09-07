@@ -20,8 +20,8 @@ Display hover text on the keybind modification button to show which mod provides
 
 By default, to avoid disturbing users, information that is not useful to ordinary players is not shown.  
 If you need it, you can enable additional features in the config screen.  
-![](https://github.com/TheWhiteDog9487/WhoProvideThisKeybind/blob/%E4%B8%BB%E8%A6%81/%E5%9B%BE%E7%89%87/Snipaste_2026-09-03_20-38-14.png)
-![](https://github.com/TheWhiteDog9487/WhoProvideThisKeybind/blob/%E4%B8%BB%E8%A6%81/%E5%9B%BE%E7%89%87/Snipaste_2026-09-03_20-38-32.png)
+![](https://github.com/TheWhiteDog9487/WhoProvideThisKeybind/blob/%E4%B8%BB%E8%A6%81/%E5%9B%BE%E7%89%87/Snipaste_2026-09-03_20-38-14.png?raw=true)
+![](https://github.com/TheWhiteDog9487/WhoProvideThisKeybind/blob/%E4%B8%BB%E8%A6%81/%E5%9B%BE%E7%89%87/Snipaste_2026-09-03_20-38-32.png?raw=true)
 
 # Important Notes
 **This mod cannot guarantee 100% accuracy!**  
