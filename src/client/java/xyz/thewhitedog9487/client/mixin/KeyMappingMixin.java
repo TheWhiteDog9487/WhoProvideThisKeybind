@@ -10,26 +10,17 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.include.com.google.common.io.Files;
 import xyz.thewhitedog9487.client.MiscellaneousKt;
 import xyz.thewhitedog9487.client.ModInfo;
-import xyz.thewhitedog9487.client.WhoProvideThisKeybindModClient;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.function.Function;
 
 @Mixin(KeyMapping.class)
 public class KeyMappingMixin {
     @Inject(method = "<init>(Ljava/lang/String;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILnet/minecraft/client/KeyMapping$Category;I)V",
             at = @At("TAIL"))
-    void DiscoverStackTrace(String name, InputConstants.Type type, int value, KeyMapping.Category category, int order, CallbackInfo ci) throws IOException, ClassNotFoundException {
+    void DiscoverStackTrace(String name, InputConstants.Type type, int value, KeyMapping.Category category, int order, CallbackInfo ci) {
         var StackTraceCLassNames = Arrays.stream(Thread.currentThread().getStackTrace())
                 .map(StackTraceElement::getClassName)
                 .toList();

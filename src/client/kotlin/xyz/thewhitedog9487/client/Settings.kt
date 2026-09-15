@@ -7,7 +7,6 @@ import net.fabricmc.loader.api.FabricLoader
 import java.nio.file.FileSystems
 import java.nio.file.Path
 import java.nio.file.StandardWatchEventKinds
-import java.nio.file.StandardWatchEventKinds.*
 
 const val CurrentConfigurationVersionCode: Long = 0
 class Settings {
@@ -80,7 +79,7 @@ class Settings {
 
 var SettingsHandler: ConfigClassHandler<Settings>? = null
 
-val ConfigFilePath = FabricLoader
+val ConfigFilePath: Path = FabricLoader
     .getInstance()
     .configDir
     .resolve(WhoProvideThisKeybindModClient.FriendlyModID + ".json5")
@@ -96,7 +95,7 @@ fun RegisterConfigFileReloadWatcher() {
         val ConfigDirectory = ConfigFilePath.parent
         try {
             val WatchService = FileSystems.getDefault().newWatchService()
-            ConfigDirectory.register(WatchService, ENTRY_CREATE, ENTRY_MODIFY, ENTRY_DELETE)
+            ConfigDirectory.register(WatchService, StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_MODIFY, StandardWatchEventKinds.ENTRY_DELETE)
             while (!Thread.currentThread().isInterrupted) {
                 val WatchKey = WatchService.take()
                 var ShouldReload = false
@@ -114,7 +113,7 @@ fun RegisterConfigFileReloadWatcher() {
                     WhoProvideThisKeybindModClient.ClientLogger.info("检测到配置文件变更，已重新加载设置。") }
                 if (!WatchKey.reset()) {
                     break } }
-        } catch (e: InterruptedException) {
+        } catch (_: InterruptedException) {
             Thread.currentThread().interrupt()
         } catch (e: IOException) {
             throw RuntimeException(e) } } }
