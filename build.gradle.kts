@@ -52,6 +52,16 @@ dependencies {
     implementation("maven.modrinth:fuuu3xnx:bvFby61J")
 //    https://modrinth.com/mod/controlling/versions?l=fabric
     implementation("maven.modrinth:xv94TkTM:rAp2jljs")
+//    https://modrinth.com/mod/notenoughcrashes/versions?l=fabric
+    implementation("maven.modrinth:yM94ont6:3oHxOFPT")
+//    https://modrinth.com/mod/scoreboard-overhaul/versions
+    implementation("maven.modrinth:2YIQkF2v:HI1qkixZ")
+//    https://modrinth.com/plugin/plasmo-voice/versions?l=fabric
+    implementation("maven.modrinth:1bZhdhsH:I0T9OQcy")
+//    https://modrinth.com/mod/first-person-model/versions?l=fabric
+    implementation("maven.modrinth:H5XMjpHi:6sgz2HEq")
+//    https://modrinth.com/mod/entityculling/versions?l=fabric
+    implementation("maven.modrinth:NNAgCjsB:iiF6U3Ne")
 }
 
 tasks.processResources {

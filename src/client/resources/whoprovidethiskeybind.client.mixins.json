@@ -3,7 +3,8 @@
   "package": "xyz.thewhitedog9487.client.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
-    "KeyBindsListKeyEntryMixin"
+    "KeyBindsListKeyEntryMixin",
+    "KeyMappingMixin"
   ],
   "injectors": {
     "defaultRequire": 1

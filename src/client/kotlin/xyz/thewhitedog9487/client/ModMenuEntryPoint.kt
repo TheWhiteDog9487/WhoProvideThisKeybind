@@ -44,6 +44,13 @@ class ModMenuEntryPoint: ModMenuApi {
                             .binding( false, { SettingsInstance.ShowDebugInfo }, { SettingsInstance.ShowDebugInfo = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
+                    .option {
+                        Option.createBuilder<Boolean>()
+                            .name(Component.translatable("option.SearchInStackTrace"))
+                            .description { OptionDescription.of(Component.translatable("option.SearchInStackTrace.description") ) }
+                            .binding( false, { SettingsInstance.SearchInStackTrace }, { SettingsInstance.SearchInStackTrace = it } )
+                            .controller(BooleanControllerBuilder::create )
+                            .build() }
                     .build() }
             .build()
             .generateScreen(ParentScreen) } }

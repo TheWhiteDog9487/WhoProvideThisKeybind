@@ -7,17 +7,22 @@ import net.minecraft.client.KeyMapping
 import net.minecraft.client.gui.components.Button
 import net.minecraft.client.gui.components.Tooltip
 import net.minecraft.network.chat.Component
+import kotlin.io.path.pathString
 
 val VanillaMinecraftContainer: ModContainer = FabricLoader
     .getInstance()
     .getModContainer("minecraft")
     .get()
 
+val KeyMappingToMod: HashMap<KeyMapping, ModInfo> = HashMap()
+
 val KeyMapping.Provider: ModInfo get() {
+    if (SettingsInstance.SearchInStackTrace) {
+        KeyMappingToMod[this]?.let { return it } }
+
     val KeyBindTranslationKey = name
     val CandidateModIds = KeyBindTranslationKey.split(".")
     if (CandidateModIds.size == 1){
-        WhoProvideThisKeybindModClient.ClientLogger.warn("这是个什么东西，按键绑定ID只有一个部分，ID： $KeyBindTranslationKey")
         return ModInfo(null) }
     for (CandidateModId in CandidateModIds) {
         val ModContainer = FabricLoader.getInstance().getModContainer(CandidateModId)
