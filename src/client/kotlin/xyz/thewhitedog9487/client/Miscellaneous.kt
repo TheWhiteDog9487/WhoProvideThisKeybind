@@ -34,7 +34,8 @@ data class ModInfo(val ModContainerInstance: ModContainer?) {
     val ID: String = ModContainerInstance?.metadata?.id ?: Component.translatable("special_provider_UNKNOWN").string
     val MetaData: ModMetadata? = ModContainerInstance?.metadata
     val DisplayName: String = MetaData?.name ?: Component.translatable("special_provider_UNKNOWN").string
-    val HumanFriendlyName: Component = Component.translatableWithFallback("modmenu.nameTranslation." + (MetaData?.id ?: "unknown"), DisplayName) }
+    val HumanFriendlyName: Component = Component.translatableWithFallback("modmenu.nameTranslation." + (MetaData?.id ?: "unknown"), DisplayName)
+    val FilePath: String = ModContainerInstance?.origin?.paths?.joinToString("\n") { it.pathString } ?: Component.translatable("special_string_UNKNOWN").string }
 
 fun Button.SetNewTooltip(Key: KeyMapping) {
     if (SettingsInstance.ModEnabled == false) return
@@ -61,5 +62,10 @@ fun Button.SetNewTooltip(Key: KeyMapping) {
         NewTooltip.append(Component.literal("\n"))
             .append(Component.translatable("tooltip.key_id",
                 Component.literal(Key.name))) }
+
+    // 第四行：文件路径
+    if (SettingsInstance.ShowFilePath) {
+        NewTooltip.append(Component.literal("\n"))
+            .append(Component.translatable("tooltip.mod_file_path", Mod.FilePath)) }
 
     setTooltip(Tooltip.create(NewTooltip)) }

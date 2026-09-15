@@ -13,6 +13,8 @@
   "option.ShowKeybindID.description": "Display the keybind's own ID in the tooltip",
   "option.ShowDebugInfo": "Show Debug Info",
   "option.ShowDebugInfo.description": "This information is used to troubleshoot issues related to this mod; it generally does not need to be enabled",
+  "option.ShowFilePath": "Show File Path",
+  "option.ShowFilePath.description": "Display the mod file path in the information",
   "option.SearchInStackTrace": "Enable aggressive search via stack trace lookup",
   "option.SearchInStackTrace.description": "Injects into the KeyMapping class constructor and queries the current thread's call stack each time a keybind is registered for aggressive matching\nWarning: In some cases, this may produce more false positives; enable as needed",
   "tooltip.provided_by": "Provided by: %s",
