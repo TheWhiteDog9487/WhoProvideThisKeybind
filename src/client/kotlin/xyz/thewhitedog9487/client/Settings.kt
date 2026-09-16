@@ -9,6 +9,10 @@ import java.nio.file.Path
 import java.nio.file.StandardWatchEventKinds
 
 const val CurrentConfigurationVersionCode: Long = 0
+
+/**
+ * @see ModMenuEntryPoint\
+ */
 class Settings {
     @SerialEntry(comment =
         """
@@ -61,12 +65,11 @@ class Settings {
     @SerialEntry(comment =
         """
         是否注入KeyMapping构造函数，在每次注册按键绑定时查询线程的调用栈信息来进行强力匹配
-        警告：在部分情况下可能产生更多误报，请按需选择
         类型：布尔值
         取值范围：true false
-        默认值：false
+        默认值：true
         """)
-    var SearchInStackTrace = false
+    var SearchInStackTrace = true
 
     @SerialEntry(comment =
         """

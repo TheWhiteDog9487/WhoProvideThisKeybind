@@ -16,7 +16,7 @@
   "option.ShowFilePath": "Show File Path",
   "option.ShowFilePath.description": "Display the mod file path in the information",
   "option.SearchInStackTrace": "Enable aggressive search via stack trace lookup",
-  "option.SearchInStackTrace.description": "Injects into the KeyMapping class constructor and queries the current thread's call stack each time a keybind is registered for aggressive matching\nWarning: In some cases, this may produce more false positives; enable as needed",
+  "option.SearchInStackTrace.description": "Injects into the KeyMapping class constructor and queries the current thread's call stack each time a keybind is registered for aggressive matching",
   "tooltip.provided_by": "Provided by: %s",
   "tooltip.provider_mod_id": "Provider Mod ID: %s",
   "tooltip.key_id": "Keybind ID: %s",

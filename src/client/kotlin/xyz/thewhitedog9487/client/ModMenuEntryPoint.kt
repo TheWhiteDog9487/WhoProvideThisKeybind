@@ -48,7 +48,7 @@ class ModMenuEntryPoint: ModMenuApi {
                         Option.createBuilder<Boolean>()
                             .name(Component.translatable("option.SearchInStackTrace"))
                             .description { OptionDescription.of(Component.translatable("option.SearchInStackTrace.description") ) }
-                            .binding( false, { SettingsInstance.SearchInStackTrace }, { SettingsInstance.SearchInStackTrace = it } )
+                            .binding( true, { SettingsInstance.SearchInStackTrace }, { SettingsInstance.SearchInStackTrace = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
                     .option {

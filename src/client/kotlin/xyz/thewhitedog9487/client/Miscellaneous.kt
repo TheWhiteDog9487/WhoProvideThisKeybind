@@ -17,17 +17,16 @@ val VanillaMinecraftContainer: ModContainer = FabricLoader
 val KeyMappingToMod: HashMap<KeyMapping, ModInfo> = HashMap()
 
 val KeyMapping.Provider: ModInfo get() {
-    if (SettingsInstance.SearchInStackTrace) {
-        KeyMappingToMod[this]?.let { return it } }
-
     val KeyBindTranslationKey = name
     val CandidateModIds = KeyBindTranslationKey.split(".")
-    if (CandidateModIds.size == 1){
-        return ModInfo(null) }
     for (CandidateModId in CandidateModIds) {
         val ModContainer = FabricLoader.getInstance().getModContainer(CandidateModId)
         if (ModContainer.isPresent) {
             return ModContainer.map(::ModInfo).get() } }
+    if (SettingsInstance.SearchInStackTrace) {
+        KeyMappingToMod[this]?.let { return it } }
+    if (CandidateModIds.size == 1){
+        return ModInfo(null) }
     return ModInfo(VanillaMinecraftContainer) }
 
 data class ModInfo(val ModContainerInstance: ModContainer?) {

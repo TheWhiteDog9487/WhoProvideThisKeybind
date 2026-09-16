@@ -42,7 +42,4 @@ public class KeyMappingMixin {
                 || ClassName.startsWith("kotlin.")
                 || ClassName.startsWith("net.minecraft")
                 || ClassName.startsWith("net.fabricmc")
-                || ClassName.startsWith("org.spongepowered.")
-
-                // ↓ 第三方Mod兼容条目
-                || ClassName.startsWith("dev.tr7zw.transition"); } }
+                || ClassName.startsWith("org.spongepowered."); } }
