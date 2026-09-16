@@ -30,9 +30,9 @@ val KeyMapping.Provider: ModInfo get() {
     return ModInfo(VanillaMinecraftContainer) }
 
 data class ModInfo(val ModContainerInstance: ModContainer?) {
-    val ID: String = ModContainerInstance?.metadata?.id ?: Component.translatable("special_provider_UNKNOWN").string
+    val ID: String = ModContainerInstance?.metadata?.id ?: Component.translatable("special_string_UNKNOWN").string
     val MetaData: ModMetadata? = ModContainerInstance?.metadata
-    val DisplayName: String = MetaData?.name ?: Component.translatable("special_provider_UNKNOWN").string
+    val DisplayName: String = MetaData?.name ?: Component.translatable("special_string_UNKNOWN").string
     val HumanFriendlyName: Component = Component.translatableWithFallback("modmenu.nameTranslation." + (MetaData?.id ?: "unknown"), DisplayName)
     val FilePath: String = ModContainerInstance?.origin?.paths?.joinToString("\n") { it.pathString } ?: Component.translatable("special_string_UNKNOWN").string }
 
