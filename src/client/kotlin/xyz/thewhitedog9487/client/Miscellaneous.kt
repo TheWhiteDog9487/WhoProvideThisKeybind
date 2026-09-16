@@ -34,7 +34,12 @@ data class ModInfo(val ModContainerInstance: ModContainer?) {
     val MetaData: ModMetadata? = ModContainerInstance?.metadata
     val DisplayName: String = MetaData?.name ?: Component.translatable("special_string_UNKNOWN").string
     val HumanFriendlyName: Component = Component.translatableWithFallback("modmenu.nameTranslation." + (MetaData?.id ?: "unknown"), DisplayName)
-    val FilePath: String = ModContainerInstance?.origin?.paths?.joinToString("\n") { it.pathString } ?: Component.translatable("special_string_UNKNOWN").string }
+    val FilePath: String get() {
+        val ModOrigin = ModContainerInstance?.origin
+        return try {
+            ModOrigin?.paths?.joinToString("\n") { it.pathString } ?: Component.translatable("special_string_UNKNOWN").string }
+        catch (_: UnsupportedOperationException) {
+            Component.translatable("special_string_UNKNOWN").string } } }
 
 fun Button.SetNewTooltip(Key: KeyMapping) {
     if (SettingsInstance.ModEnabled == false) return
