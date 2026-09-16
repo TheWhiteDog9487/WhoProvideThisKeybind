@@ -64,15 +64,6 @@ class Settings {
 
     @SerialEntry(comment =
         """
-        是否注入KeyMapping构造函数，在每次注册按键绑定时查询线程的调用栈信息来进行强力匹配
-        类型：布尔值
-        取值范围：true false
-        默认值：true
-        """)
-    var SearchInStackTrace = true
-
-    @SerialEntry(comment =
-        """
         是否在悬停信息中显示Mod的文件路径
         类型：布尔值
         取值范围：true false

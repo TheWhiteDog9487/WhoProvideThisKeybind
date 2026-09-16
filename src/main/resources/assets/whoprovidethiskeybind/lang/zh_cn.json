@@ -15,8 +15,6 @@
   "option.ShowDebugInfo.description": "这些信息用于出现和本Mod相关的问题时进行排查，一般情况下不需要开启",
   "option.ShowFilePath": "是否显示文件路径",
   "option.ShowFilePath.description": "在信息中显示Mod的文件路径",
-  "option.SearchInStackTrace": "是否要通过查询堆栈信息来进行强力搜索",
-  "option.SearchInStackTrace.description": "注入KeyMapping类的构造函数，在每次注册按键绑定时查询线程的调用栈信息来进行强力匹配",
   "tooltip.provided_by": "提供者：%s",
   "tooltip.provider_mod_id": "提供者ID：%s",
   "tooltip.key_id": "键位ID：%s",

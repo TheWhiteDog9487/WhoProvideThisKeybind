@@ -23,8 +23,7 @@ val KeyMapping.Provider: ModInfo get() {
         val ModContainer = FabricLoader.getInstance().getModContainer(CandidateModId)
         if (ModContainer.isPresent) {
             return ModContainer.map(::ModInfo).get() } }
-    if (SettingsInstance.SearchInStackTrace) {
-        KeyMappingToMod[this]?.let { return it } }
+    KeyMappingToMod[this]?.let { return it }
     if (CandidateModIds.size == 1){
         return ModInfo(null) }
     return ModInfo(VanillaMinecraftContainer) }
