@@ -18,37 +18,45 @@ class ModMenuEntryPoint: ModMenuApi {
                     .name(Component.translatable("config.category.general"))
                     .option {
                         Option.createBuilder<Boolean>()
-                            .name(Component.translatable("option.ModEnabled"))
-                            .description { OptionDescription.of(Component.translatable("option.ModEnabled.description") ) }
+                            .name(Component.translatable("option.general.ModEnabled"))
+                            .description { OptionDescription.of(Component.translatable("option.general.ModEnabled.description") ) }
                             .binding( true, { SettingsInstance.ModEnabled }, { SettingsInstance.ModEnabled = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
+                    .build() }
+            .category {
+                ConfigCategory.createBuilder()
+                    .name(Component.translatable("config.category.feature"))
                     .option {
                         Option.createBuilder<Boolean>()
-                            .name(Component.translatable("option.ShowModID"))
-                            .description { OptionDescription.of(Component.translatable("option.ShowModID.description") ) }
+                            .name(Component.translatable("option.feature.ShowModID"))
+                            .description { OptionDescription.of(Component.translatable("option.feature.ShowModID.description") ) }
                             .binding( false, { SettingsInstance.ShowModID }, { SettingsInstance.ShowModID = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
                     .option {
                         Option.createBuilder<Boolean>()
-                            .name(Component.translatable("option.ShowKeybindID"))
-                            .description { OptionDescription.of(Component.translatable("option.ShowKeybindID.description") ) }
+                            .name(Component.translatable("option.feature.ShowKeybindID"))
+                            .description { OptionDescription.of(Component.translatable("option.feature.ShowKeybindID.description") ) }
                             .binding( false, { SettingsInstance.ShowKeybindID }, { SettingsInstance.ShowKeybindID = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
                     .option {
                         Option.createBuilder<Boolean>()
-                            .name(Component.translatable("option.ShowDebugInfo"))
-                            .description { OptionDescription.of(Component.translatable("option.ShowDebugInfo.description") ) }
-                            .binding( false, { SettingsInstance.ShowDebugInfo }, { SettingsInstance.ShowDebugInfo = it } )
+                            .name(Component.translatable("option.feature.ShowFilePath"))
+                            .description { OptionDescription.of(Component.translatable("option.feature.ShowFilePath.description") ) }
+                            .binding( false, { SettingsInstance.ShowFilePath }, { SettingsInstance.ShowFilePath = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
+                    .build() }
+            .category {
+                ConfigCategory.createBuilder()
+                    .name(Component.translatable("config.category.debug"))
                     .option {
                         Option.createBuilder<Boolean>()
-                            .name(Component.translatable("option.ShowFilePath"))
-                            .description { OptionDescription.of(Component.translatable("option.ShowFilePath.description") ) }
-                            .binding( false, { SettingsInstance.ShowFilePath }, { SettingsInstance.ShowFilePath = it } )
+                            .name(Component.translatable("option.debug.ShowDebugInfo"))
+                            .description { OptionDescription.of(Component.translatable("option.debug.ShowDebugInfo.description") ) }
+                            .binding( false, { SettingsInstance.ShowDebugInfo }, { SettingsInstance.ShowDebugInfo = it } )
                             .controller(BooleanControllerBuilder::create )
                             .build() }
                     .build() }
