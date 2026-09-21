@@ -45,24 +45,7 @@ dependencies {
     implementation("net.fabricmc:fabric-language-kotlin:${providers.gradleProperty("fabric_kotlin_version").get()}")
 
     implementation("com.terraformersmc:modmenu:${providers.gradleProperty("modmenu_version").get()}")
-    implementation("dev.isxander:yet-another-config-lib:${providers.gradleProperty("yacl_version").get()}")
-
-//    测试用途 ↓
-//    https://modrinth.com/mod/searchables/versions?l=fabric
-    implementation("maven.modrinth:fuuu3xnx:bvFby61J")
-//    https://modrinth.com/mod/controlling/versions?l=fabric
-    implementation("maven.modrinth:xv94TkTM:rAp2jljs")
-//    https://modrinth.com/mod/notenoughcrashes/versions?l=fabric
-    implementation("maven.modrinth:yM94ont6:3oHxOFPT")
-//    https://modrinth.com/mod/scoreboard-overhaul/versions
-    implementation("maven.modrinth:2YIQkF2v:HI1qkixZ")
-//    https://modrinth.com/plugin/plasmo-voice/versions?l=fabric
-    implementation("maven.modrinth:1bZhdhsH:I0T9OQcy")
-//    https://modrinth.com/mod/first-person-model/versions?l=fabric
-    implementation("maven.modrinth:H5XMjpHi:6sgz2HEq")
-//    https://modrinth.com/mod/entityculling/versions?l=fabric
-    implementation("maven.modrinth:NNAgCjsB:iiF6U3Ne")
-}
+    implementation("dev.isxander:yet-another-config-lib:${providers.gradleProperty("yacl_version").get()}")  }
 
 tasks.processResources {
     val version = version
